@@ -310,12 +310,12 @@ def selectnode(mode="sms"):
         check_for_updates()
         notifyen()
 
-        max_limit = {"sms": 500, "call": 15, "mail": 200}
+        max_limit = {"sms": 999999, "call": 999999, "mail": 99999}
         cc, target = "", ""
         if mode in ["sms", "call"]:
             cc, target = get_phone_info()
             if cc != "91":
-                max_limit.update({"sms": 100})
+                max_limit.update({"sms": 99999})
         elif mode == "mail":
             target = get_mail_info()
         else:
